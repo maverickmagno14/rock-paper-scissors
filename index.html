@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="index.css">
+        <script defer src="index.js"></script>
+    </head>
+
+    <body>
+       <header>
+            <p>Javascript Activity</p>
+            <!-- <img class="helpButton floating" src="./images/help-icon.png"> -->
+        </header>
+
+        <img class="helpButton floating" src="./images/help-icon.png">
+        <h1>Rock Paper Scissors</h1>
+
+        <div id="finish" class="content">
+            <h2>Choose your move</h2>
+            <div class="scores">
+                <div id="pDisplayScore" class="player score invi">
+                    <p>Player Score</p>
+                    <p id="pScore" class="number score">
+                        0
+                    </p>
+                </div>
+
+                <div id="eDisplayScore" class="enemy score invi">
+                    <p>Enemy Score</p>
+                    <p id="eScore" class="number score">
+                        0
+                    </p>
+                </div>
+            </div>
+            
+            <div class="weapons">
+                <div class="weapon hidden">
+                    <img id="rockButton" src="./images/rock.png" alt="Rock">
+                </div>
+                <div class="weapon hidden">
+                    <img id="paperButton" src="./images/paper.png" alt="Paper">
+                </div>
+                <div class="weapon hidden">
+                    <img id="scissorsButton" src="./images/scissors.png" alt="Scissors">
+                </div>
+            </div>
+
+            <div class="buttonHolder hidden">
+                <img id="playButton" src="./images/btn-play.png" class="buttonStart hidden">
+
+                <p class="message"></p>
+
+            </div>
+
+            <!-- <div id="messageGuide" class="invi">
+                <p class="guideLabel">Click the image you wish to use</p>
+                <p id="roundMessage">Lookism Fly UP 1 hour</p>
+                <p id="hintMessage">TIP: It is ok to cry, clear all your pain, then fill it up again</p>
+            </div> -->
+
+
+        </div>
+        <div id="messageGuide" class="invi">
+            <p class="guideLabel">Click the image you wish to use</p>
+            <p id="roundMessage">Lookism Fly UP 1 hour</p>
+            <p id="hintMessage">TIP: It is ok to cry, clear all your pain, then fill it up again</p>
+        </div>
+
+        <div class="appear">
+            <h1>How to Play</h1>
+            <ol>
+                <li>Click the image you wish to use</li>
+                <li>First to score 5 wins the match</li>
+                <li>Rock beats Scissors - Scissors beats Paper - Paper beats Rock</li>
+            </ol>
+            <img src="./images/help.jpg" alt="Rock" class="howImage">
+        </div>
+
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

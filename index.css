@@ -1,0 +1,191 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(pdark.ttf);
+  }
+
+  body {
+    font-family: myFirstFont;
+
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  body > * {
+    margin-bottom: 30px;
+  }
+
+  header {
+    margin-bottom: 0px;
+    background-color: #222222;
+    padding: 10px 0px 10px 100px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: start;
+  }
+
+  header:nth-child(2) {
+    align-items: end;
+  }
+
+  .weapon img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .help-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .content {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .helpButton {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .weapons {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .scores {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 20px;
+  }
+
+  .buttonHolder {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  .content .invi {
+    visibility: hidden;
+  }
+
+  /* Help Content */
+  .appear {
+    display: none;
+    flex-flow: column wrap;
+    color: black;
+    background-color: white;
+
+    justify-content: center;
+    align-content: center;
+  }
+
+  .appear img {
+    visibility: hidden;
+    width: 100vh;
+  }
+
+  .appear ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  .appear ol li {
+    font-family: sans-serif;
+    list-style-position: outside;
+    align-content: center;
+    font-weight: bold;
+  }
+
+  /* Message Guide */
+  #messageGuide .guideLabel {
+    font-family: myFirstFont;
+  }
+  #messageGuide p {
+    font-family: sans-serif;
+  }
+
+
+  /* Hover on Help Icon */
+  .helpButton:hover ~ .content {
+    display: none;
+  }
+
+  .helpButton:hover {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: -5px 5px 10px #555555;
+  }
+
+  .helpButton:hover ~ .appear {
+    display: flex;
+  }
+
+  .helpButton:hover ~ .appear img {
+    visibility: visible;
+  }
+
+  /* Hover on Content */
+  .weapon img:hover {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    box-shadow: -5px 5px 20px #555555;
+  }
+  
+  /* Animations */
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+  .weapon:nth-child(2) {
+    transition-delay: 300ms;
+  }
+
+  .weapon:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+  .buttonStart {
+    transition-delay: 500ms;
+  }
+
+  @media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+  }
